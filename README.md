@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
 [![Go](https://img.shields.io/badge/Go-1.26-00ADD8?logo=go&logoColor=white)](https://go.dev)
 
-FilesCodeBox 生态的共享 Go 工具库：24 个零生态依赖的通用包（重试、并发编排、限流、错误聚合、随机 ID 等），供 core / server / fnos / p2p 及任意 Go 项目复用。
+FilesCodeBox 生态的共享 Go 工具库：28 个零生态依赖的通用包（重试、并发编排、限流、优雅停机、工作流等），供 core / server / fnos / p2p 及任意 Go 项目复用。
 
-**Shared Go toolkit for the FilesCodeBox ecosystem** — 24 general-purpose packages with zero ecosystem dependencies.
+**Shared Go toolkit for the FilesCodeBox ecosystem** — 28 general-purpose packages with zero ecosystem dependencies.
 
 ## 设计原则
 
@@ -65,6 +65,17 @@ FilesCodeBox 生态的共享 Go 工具库：24 个零生态依赖的通用包（
 | 包 | 说明 |
 |---|------|
 | [version](./version/) | 编译时版本注入（-ldflags）+ 运行时查询（Metadata()） |
+
+### 服务治理与网络
+
+| 包 | 说明 |
+|---|------|
+| [shutdown](./shutdown/) | 优雅停机管理器：信号接入 + 引用计数请求阻断 + 资源逆序释放（日志走 stdlib slog） |
+| [workflow](./workflow/) | 流程编排：Pipe 串行 / Parallel 并行 / Async+Future / Switch 条件分支，可任意嵌套，Hook AOP 递归传播 |
+| [streamx](./streamx/) | 跨协议流式事件抽象（Event/Source/Sink/Hub）：一次写 Event，SSE/WS/Chunked 多协议扇出，零框架依赖 |
+| [wsutil](./wsutil/) | WebSocket 房间广播器：Conn 接口解耦不绑具体 ws 库，空房间自动清理、容错广播 |
+
+> 日志约定：以上包的运行日志统一走 stdlib `log/slog`（`slog.Default()`），消费方可用自定义 handler 接管输出格式。
 
 ## 快速开始
 

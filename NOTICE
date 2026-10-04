@@ -5,10 +5,11 @@ This product is licensed under the Apache License, Version 2.0 (see LICENSE).
 
 The general-purpose utility packages in this repository (async/, cache/,
 convert/, encoding/, enumx/, errors/, group/, httpjson/, jsonrepair/, mathx/,
-pagination/, pathx/, progress/, ptrx/, ratelimit/, retry/, singleflight/,
-slicex/, stringx/, syncx/, timex/, uidgen/, validator/, version/) are derived
-from the enjoydream/ekit project and redistributed under the terms of the MIT
-License, which requires retaining the following notice:
+pagination/, pathx/, progress/, ptrx/, ratelimit/, retry/, shutdown/,
+singleflight/, slicex/, streamx/, stringx/, syncx/, timex/, uidgen/,
+validator/, version/, workflow/, wsutil/) are derived from the
+enjoydream/ekit project and redistributed under the terms of the MIT License,
+which requires retaining the following notice:
 
 --------------------------------------------------------------------------
 MIT License
