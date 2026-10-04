@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
 [![Go](https://img.shields.io/badge/Go-1.26-00ADD8?logo=go&logoColor=white)](https://go.dev)
 
-FilesCodeBox 生态的共享 Go 工具库：20 个零生态依赖的通用包（重试、并发编排、限流、错误聚合、随机 ID 等），供 core / server / fnos / p2p 及任意 Go 项目复用。
+FilesCodeBox 生态的共享 Go 工具库：24 个零生态依赖的通用包（重试、并发编排、限流、错误聚合、随机 ID 等），供 core / server / fnos / p2p 及任意 Go 项目复用。
 
-**Shared Go toolkit for the FilesCodeBox ecosystem** — 20 general-purpose packages with zero ecosystem dependencies.
+**Shared Go toolkit for the FilesCodeBox ecosystem** — 24 general-purpose packages with zero ecosystem dependencies.
 
 ## 设计原则
 
@@ -22,10 +22,13 @@ FilesCodeBox 生态的共享 Go 工具库：20 个零生态依赖的通用包（
 | 包 | 说明 |
 |---|------|
 | [async](./async/) | 安全 goroutine 启动工具（GoSafe 等 panic 恢复原语，进程兜底层） |
+| [group](./group/) | Actor 组：多长驻 goroutine 并发执行，任一返回即中断其余 |
+| [singleflight](./singleflight/) | 并发请求合并（防击穿）：同 key 并发调用只执行一次、共享结果 |
 | [syncx](./syncx/) | 并发编排原语：按键在飞闸门 + 按序扇出收集 |
 | [retry](./retry/) | 可取消的重试与轮询：带退避的动作重试 + 到 deadline 的条件轮询 |
-| [ratelimit](./ratelimit/) | 通用限流器（令牌桶 + 键控限流） |
+| [ratelimit](./ratelimit/) | 通用限流器（令牌桶 + 按键限流管理器，空闲键自动回收） |
 | [cache](./cache/) | 进程内检查缓存：TTL 缓存 + 刷新进行中合一 |
+| [progress](./progress/) | 多阶段工作流进度追踪（有序阶段生命周期 + 总进度） |
 
 ### 错误与校验
 
@@ -56,6 +59,12 @@ FilesCodeBox 生态的共享 Go 工具库：20 个零生态依赖的通用包（
 | [timex](./timex/) | 时间操作 + cron 子包 |
 | [pathx](./pathx/) | 文件路径匹配 |
 | [ptrx](./ptrx/) | 指针泛型工具 |
+
+### 构建信息
+
+| 包 | 说明 |
+|---|------|
+| [version](./version/) | 编译时版本注入（-ldflags）+ 运行时查询（Metadata()） |
 
 ## 快速开始
 
