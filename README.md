@@ -101,7 +101,7 @@ defer release()
 
 ```
 server / fnos / frontend ──► core ──► contracts ──► thrift runtime
-p2p（叶子仓）                  └────► kit（本仓，叶子仓）
+p2p（叶子仓）────────────────► kit（本仓，零生态依赖地基层；core 亦按需消费）
 ```
 
 纯库仓：无二进制、无镜像、无 chart；以 git tag（`v*`）发布，`go get` 直接消费。
