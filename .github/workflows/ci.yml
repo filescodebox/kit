@@ -26,6 +26,6 @@ jobs:
           args: --timeout 9m
       - name: Dep guard(kit 为生态叶子仓,禁依赖任何兄弟模块)
         run: |
-          BAD=$(go list -deps ./... | grep -E '^github\.com/filescodebox/' | grep -Ev '^github\.com/filescodebox/kit(/|$)' || true)
+          BAD=$(go list -deps ./... | grep -E '^github\.com/pigeonbox/' | grep -Ev '^github\.com/pigeonbox/kit(/|$)' || true)
           if [ -n "$BAD" ]; then echo "✗ kit 违规依赖:"; echo "$BAD"; exit 1; fi
           echo "✓ 依赖方向合规"

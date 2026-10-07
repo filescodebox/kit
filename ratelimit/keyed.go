@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/filescodebox/kit/async"
+	"github.com/pigeonbox/kit/async"
 )
 
 // KeyedLimiter 是按 key 隔离的限流器管理器。

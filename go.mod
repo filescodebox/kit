@@ -1,4 +1,4 @@
-module github.com/filescodebox/kit
+module github.com/pigeonbox/kit
 
 go 1.26.5
 

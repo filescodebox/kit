@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/filescodebox/kit/async"
+	"github.com/pigeonbox/kit/async"
 )
 
 // wsLog 是 wsutil 包专用 logger(marshal 失败、慢消费者告警)。

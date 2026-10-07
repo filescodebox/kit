@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/filescodebox/kit/async"
+	"github.com/pigeonbox/kit/async"
 )
 
 // WaitGroupWrapper 是 context 感知的 WaitGroup 封装。

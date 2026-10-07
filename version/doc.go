@@ -1,6 +1,6 @@
 // Package version 提供编译时版本信息注入和运行时查询。
 //
-// FilesCodeBox 各 Go 服务共享此包，通过 -ldflags 在编译时注入 git 信息。
+// PigeonBox 各 Go 服务共享此包，通过 -ldflags 在编译时注入 git 信息。
 //
 // # 注入方式
 //
@@ -9,7 +9,7 @@
 //	GIT_COMMIT=$(git rev-parse --short HEAD)
 //	GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 //	BUILD_TIME=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-//	MOD="github.com/filescodebox/kit"
+//	MOD="github.com/pigeonbox/kit"
 //	go build -ldflags "-X ${MOD}/version.BuildCommit=${GIT_COMMIT} \
 //	  -X ${MOD}/version.BuildBranch=${GIT_BRANCH} \
 //	  -X ${MOD}/version.BuildTime=${BUILD_TIME}" -o myapp .

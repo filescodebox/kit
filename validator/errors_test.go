@@ -4,7 +4,7 @@ import (
 	stderrors "errors"
 	"testing"
 
-	bizerrors "github.com/filescodebox/kit/errors"
+	bizerrors "github.com/pigeonbox/kit/errors"
 )
 
 // TestValidationError_Error_Empty covers the no-errors path:

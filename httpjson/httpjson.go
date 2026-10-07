@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/filescodebox/kit/stringx"
+	"github.com/pigeonbox/kit/stringx"
 )
 
 // maxBody 响应体采集上限（异常服务端刷屏防内存放大）。

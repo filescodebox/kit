@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/filescodebox/kit/async"
+	"github.com/pigeonbox/kit/async"
 )
 
 // ParallelFlow 并发执行多个任务。

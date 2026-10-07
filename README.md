@@ -1,17 +1,17 @@
-# FilesCodeBox kit
+# PigeonBox kit
 
-[![CI](https://github.com/filescodebox/kit/actions/workflows/ci.yml/badge.svg)](https://github.com/filescodebox/kit/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/tag/filescodebox/kit?label=release)](https://github.com/filescodebox/kit/tags)
+[![CI](https://github.com/pigeonbox/kit/actions/workflows/ci.yml/badge.svg)](https://github.com/pigeonbox/kit/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/tag/pigeonbox/kit?label=release)](https://github.com/pigeonbox/kit/tags)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
 [![Go](https://img.shields.io/badge/Go-1.26-00ADD8?logo=go&logoColor=white)](https://go.dev)
 
-FilesCodeBox 生态的共享 Go 工具库：28 个零生态依赖的通用包（重试、并发编排、限流、优雅停机、工作流等），供 core / server / fnos / p2p 及任意 Go 项目复用。
+PigeonBox 生态的共享 Go 工具库：28 个零生态依赖的通用包（重试、并发编排、限流、优雅停机、工作流等），供 core / server / fnos / p2p 及任意 Go 项目复用。
 
-**Shared Go toolkit for the FilesCodeBox ecosystem** — 28 general-purpose packages with zero ecosystem dependencies.
+**Shared Go toolkit for the PigeonBox ecosystem** — 28 general-purpose packages with zero ecosystem dependencies.
 
 ## 设计原则
 
-- **零生态依赖（叶子仓）**：不 import 任何 `github.com/filescodebox/*` 兄弟模块，CI 强制守卫；被任何模块依赖都不会成环。
+- **零生态依赖（叶子仓）**：不 import 任何 `github.com/pigeonbox/*` 兄弟模块，CI 强制守卫；被任何模块依赖都不会成环。
 - **stdlib 优先**：绝大多数包纯标准库实现；仅 3 个包带轻量外部依赖（`ratelimit` → `golang.org/x/time`，`uidgen` → `google/uuid`，`validator` → `go-playground/validator`）。
 - **带测试发布**：全部包附 `-race` 通过的单元测试；lint 棘轮从 0 issues 起步只收紧不放宽。
 
@@ -80,7 +80,7 @@ FilesCodeBox 生态的共享 Go 工具库：28 个零生态依赖的通用包（
 ## 快速开始
 
 ```bash
-go get github.com/filescodebox/kit/retry@latest
+go get github.com/pigeonbox/kit/retry@latest
 ```
 
 ```go

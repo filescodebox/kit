@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	bizerrors "github.com/filescodebox/kit/errors"
+	bizerrors "github.com/pigeonbox/kit/errors"
 )
 
 // ErrTranslationNotSupported 表示当前验证器不支持错误消息翻译。

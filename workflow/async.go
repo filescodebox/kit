@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/filescodebox/kit/async"
+	"github.com/pigeonbox/kit/async"
 )
 
 // AsyncFlow 异步执行多个任务。
