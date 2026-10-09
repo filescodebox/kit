@@ -1,6 +1,7 @@
 module github.com/pigeonbox/kit
 
 go 1.26.5
+toolchain go1.26.9
 
 require (
 	github.com/go-playground/validator/v10 v10.30.3
